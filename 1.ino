@@ -13,7 +13,7 @@ void setup() {
 void loop() {
   digitalWrite(slaveSelectPin, LOW); // Активируем устройство на шине SPI
   
-  byte data = SPI.transfer(chipSelectPin, 0x00); // Чтение данных из выбранного чипа
+  byte data = SPI.transfer(chipSelectPin, 0xFFFF); // Чтение данных из выбранного чипа
   
   digitalWrite(slaveSelectPin, HIGH); // Выключаем устройство на шине SPI
   
